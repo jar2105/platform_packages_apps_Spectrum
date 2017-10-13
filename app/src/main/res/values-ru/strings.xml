@@ -7,6 +7,13 @@
     <string name="prof2">Энергосберегающий</string>
     <string name="prof3">Игровой</string>
 
+    <!-- Support Strings -->
+    <string name="no_spectrum_support_dialog_title">Нет поддержки Spectrum</string>
+    <string name="no_spectrum_support_dialog_message">Свяжитесь с разработчиком ядра для вашего аппарата и попросите его добавить Spectrum</string>
+    <string name="no_root_detected_dialog_title">Нет прав суперпользователя</string>
+    <string name="no_root_detected_dialog_message">Нет прав суперпользователя для установки профиля.</string>
+    <string name="custom_descriptions_fail_text">Storage permission denied, Couldn\'t look for custom descriptions</string>
+
     <!-- Profile Descriptions -->
     <string name="profdesc0">The default Electron kernel profile, known for its smooth performance in basic tasks while maintaining fantastic battery.</string>
     <string name="profdesc1">Tuned for top tier performance in standard tasks with many less regressions than Balanced, but maintains battery by limiting graphics.</string>

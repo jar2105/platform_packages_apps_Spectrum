@@ -294,8 +294,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 break;
-            case default:
-                break;
             }
         }
     }
