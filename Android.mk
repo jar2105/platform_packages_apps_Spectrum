@@ -16,7 +16,9 @@ LOCAL_RESOURCE_DIR = \
 LOCAL_AAPT_FLAGS := \
         --auto-add-overlay \
         --extra-packages android.support.v7.appcompat \
-        --extra-packages android.support.design
+        --extra-packages android.support.design \
+        --extra-packages android.support.v7.cardview
+
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
@@ -24,5 +26,5 @@ LOCAL_SDK_VERSION := current
 LOCAL_MIN_SDK_VERSION := 21
 LOCAL_PACKAGE_NAME := Spectrum
 LOCAL_CERTIFICATE := platform
-
+LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 include $(BUILD_PACKAGE)
