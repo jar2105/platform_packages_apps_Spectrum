@@ -49,11 +49,9 @@ public class MainActivity extends AppCompatActivity {
         final CardView card0 = (CardView) findViewById(R.id.card0);
         final CardView card1 = (CardView) findViewById(R.id.card1);
         final CardView card2 = (CardView) findViewById(R.id.card2);
-        final CardView card3 = (CardView) findViewById(R.id.card3);
         final int balColor = ContextCompat.getColor(this, R.color.colorBalance);
         final int perColor = ContextCompat.getColor(this, R.color.colorPerformance);
         final int batColor = ContextCompat.getColor(this, R.color.colorBattery);
-        final int gamColor = ContextCompat.getColor(this, R.color.colorGaming);
 
         // Check for Spectrum Support
         if (!checkSupport(this)) {
@@ -108,9 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 case "battery":
                     card2.setVisibility(View.GONE);
                     break;
-                case "gaming":
-                    card3.setVisibility(View.GONE);
-                    break;
                 default:
                     break;
             }
@@ -160,15 +155,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        card3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cardClick(card3, 3, gamColor);
-                notaneasteregg = 1;
-            }
-        });
-
     }
 
     // Method that detects the selected profile on launch
@@ -202,13 +188,6 @@ public class MainActivity extends AppCompatActivity {
                 oldCard = card2;
                 editor.putString("profile", "battery");
                 editor.apply();
-            } else if (result.contains("3")) {
-                CardView card3 = (CardView) findViewById(R.id.card3);
-                int gamColor = ContextCompat.getColor(this, R.color.colorGaming);
-                card3.setCardBackgroundColor(gamColor);
-                oldCard = card3;
-                editor.putString("profile", "gaming");
-                editor.apply();
             } else {
                 editor.putString("profile", "custom");
                 editor.apply();
@@ -221,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
         TextView desc0 = (TextView) findViewById(R.id.desc0);
         TextView desc1 = (TextView) findViewById(R.id.desc1);
         TextView desc2 = (TextView) findViewById(R.id.desc2);
-        TextView desc3 = (TextView) findViewById(R.id.desc3);
         String balDesc;
         String kernel;
 
@@ -237,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
             if(!Objects.equals(getCustomDesc("balance"), "fail")) desc0.setText(getCustomDesc("balance"));
             if(!Objects.equals(getCustomDesc("performance"), "fail")) desc1.setText(getCustomDesc("performance"));
             if(!Objects.equals(getCustomDesc("battery"), "fail")) desc2.setText(getCustomDesc("battery"));
-            if(!Objects.equals(getCustomDesc("gaming"), "fail")) desc3.setText(getCustomDesc("gaming"));
         }
     }
 

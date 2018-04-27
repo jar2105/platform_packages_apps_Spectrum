@@ -18,7 +18,6 @@
     <string name="profdesc0">Das standardmäßige Electron-Profil, welches für seine gute Leistung bei einfachen Aufgaben bekannt ist und den Akku schont.</string>
     <string name="profdesc1">Optimiertes Profil für volle Leistung bei aufwendigeren Aufgaben. Weniger Limitierungen, dafür aber einen höheren Akkuverbrauch.</string>
     <string name="profdesc2">Sehr energiesparendes Profil, bei dem die Leistung komplett in den Hintergrund gestellt wird um den Akku möglichst lange am Leben zu erhalten.</string>
-    <string name="profdesc3">Zusätzliche 10 FPS nötig? Erwischt! Dieses Profil entfernt sämtliche Limitierungen für eine perfekte Grafik-Leistung.</string>
 
     <!-- Profile Loader -->
     <string name="aboutLoader">Hoppla!</string>
