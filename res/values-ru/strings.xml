@@ -3,9 +3,8 @@
 
     <!-- Profile Names -->
     <string name="prof0">Сбалансированный</string>
-    <string name="prof1">Производительный</string>
+    <string name="prof1">Игровой</string>
     <string name="prof2">Энергосберегающий</string>
-    <string name="prof3">Игровой</string>
 
     <!-- Support Strings -->
     <string name="no_spectrum_support_dialog_title">Нет поддержки Spectrum</string>
@@ -15,8 +14,8 @@
     <string name="custom_descriptions_fail_text">Не получено разрешение на доступ к памяти, невозможно найти пользовательские описания</string>
 
     <!-- Profile Descriptions -->
-    <string name="profdesc0">Стандартный профиль ядра Electron, известный своей высокой производительностью в основных задач при этом сохраняя батарею.</string>
-    <string name="profdesc1">Высокопроизводительный профиль, в котором сняты все ограничения процессора, для максимально комфортного использования устройства.</string>
+    <string name="profdesc0">Стандартный профиль ядра, отличающийся балансом между производительностью и энергоэффективностью.</string>
+    <string name="profdesc1">Идеально подходит для игр, но не жалеет заряд батареи.</string>
     <string name="profdesc2">Ультра-консервативный профиль, который позволяет снизить производительность для того, чтобы максимально сохранять заряд батареи.</string>
 
     <!-- Profile Loader -->
