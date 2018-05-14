@@ -15,7 +15,6 @@ import java.util.Arrays;
 @TargetApi(Build.VERSION_CODES.N)
 public class ProfileTile extends TileService {
 
-    private static final String SERVICE_STATUS_FLAG = "serviceStatus";
     private static final String PREFERENCES_KEY = "org.frap129.spectrum";
     private boolean click = false;
 
@@ -33,16 +32,16 @@ public class ProfileTile extends TileService {
         MultiProcessSharedPreferencesProvider.MultiProcessSharedPreferences profile =
                 MultiProcessSharedPreferencesProvider.getSharedPreferences(ProfileTile.this, "profile");
         SharedPreferences.Editor editor = profile.edit();
-        boolean isActive = getServiceStatus();
 
-        // Update tile and set profile
-        if (!isActive && click) {
-            Utils.setProfile(2);
-            editor.putString("profile", "battery");
-            editor.apply();
-        } else if (isActive && !click){
+        String prof = profile.getString("profile", "balanced");
+
+        if (prof.contains("balanced")) {
             Utils.setProfile(1);
             editor.putString("profile", "performance");
+            editor.apply();
+        } else if (prof.contains("performance")){
+            Utils.setProfile(2);
+            editor.putString("profile", "battery");
             editor.apply();
         } else {
             Utils.setProfile(0);
@@ -51,16 +50,6 @@ public class ProfileTile extends TileService {
         }
 
         updateTile();
-    }
-
-    private boolean getServiceStatus() {
-        SharedPreferences prefs = getApplicationContext().getSharedPreferences(PREFERENCES_KEY, MODE_PRIVATE);
-        boolean isActive = prefs.getBoolean(SERVICE_STATUS_FLAG, false);
-        isActive = !isActive;
-
-        prefs.edit().putBoolean(SERVICE_STATUS_FLAG, isActive).apply();
-
-        return isActive;
     }
 
     private void updateTile() {
