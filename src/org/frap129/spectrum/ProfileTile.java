@@ -76,15 +76,15 @@ public class ProfileTile extends TileService {
 
         // Update tile
         if (profile.contains("battery") && !disabledProfilesList.contains(profile)) {
-            newLabel = "Battery";
+            newLabel = getString(R.string.prof2);
             newIcon = Icon.createWithResource(getApplicationContext(), R.drawable.battery);
             click = true;
         } else if (profile.contains("performance") && !disabledProfilesList.contains(profile)){
-            newLabel = "Performance";
+            newLabel = getString(R.string.prof1);
             newIcon = Icon.createWithResource(getApplicationContext(), R.drawable.rocket);
             click = true;
         } else if (profile.contains("balanced") && !disabledProfilesList.contains(profile)) {
-            newLabel = "Balance";
+            newLabel = getString(R.string.prof0);
             newIcon = Icon.createWithResource(getApplicationContext(), R.drawable.atom);
             click = false;
         } else {
