@@ -1,19 +1,5 @@
-# <img src="https://raw.githubusercontent.com/frap129/spectrum/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="70" height="70" /> Spectrum
-A simple, profile based kernel manager.
+# <img src="https://raw.githubusercontent.com/difr/spectrum/master/res/drawable-xxxhdpi/ic_launcher.png" width="70" height="70" /> Spectrum
+A simple profile manager.
 
-## How to add Spectrum support to your kernel
-You'll need to add these 2 files to your devices ramdisk:
-- init.spectrum.rc
-- init.spectrum.sh
-
-These files are included in the _ramdisk_ folder in this repo. To use these ramdisk files, add
->     import /init.spectrum.rc
-
-to the top of your devices main ramdisk file.
-
-Next add your kernel name to the app. Open init.spectrum.rc and change "Electron" in
->        setprop persist.spectrum.kernel Electron
-
-to your kernel's name.
-
-Now just customize the 4 profiles in init.spectrum.rc to your liking! Profile 0 (Balanced) is the default, however, this can be changed in init.spectrum.sh.
+## How to add Spectrum support
+Put "init.spectrum.sh" and "init.spectrum.rc" (last one can have some name modificator in the middle, eg "init.spectrum.test1.rc") into the directory "/system/etc/init".
